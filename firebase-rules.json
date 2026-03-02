@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "services": {
+      ".read": true,
+      ".write": "auth != null"
+    },
+    "projects": {
+      ".read": true,
+      ".write": "auth != null"
+    },
+    "team": {
+      ".read": true,
+      ".write": "auth != null"
+    },
+    "contact": {
+      "messages": {
+        ".read": "auth != null",
+        ".write": true
+      }
+    }
+  }
+}
