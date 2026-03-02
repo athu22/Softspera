@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ref, get } from '@firebase/database';
 import { database } from '../lib/firebase';
 import type { HomepageContent, Project, Service } from '../types';
@@ -9,6 +10,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import type { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
 import { motion } from 'framer-motion';
+import CountUp from 'react-countup';
 
 // Initialize FontAwesome library
 library.add(fas, far);
@@ -112,13 +114,13 @@ export default function HomePage() {
               </motion.p>
 
               <motion.div variants={fadeInUp} className="mt-10 flex flex-col sm:flex-row gap-5">
-                <a href="/contact" className="btn-primary flex items-center justify-center gap-2 group">
+                <Link to="/contact" className="btn-primary flex items-center justify-center gap-2 group">
                   Start Your Project
                   <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
-                </a>
-                <a href="/projects" className="btn-secondary">Overview Projects</a>
+                </Link>
+                <Link to="/projects" className="btn-secondary">Overview Projects</Link>
               </motion.div>
             </motion.div>
 
@@ -191,15 +193,71 @@ export default function HomePage() {
             </div>
 
             <div className="flex-shrink-0">
-              <a href="/internships" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-red-600 to-orange-500 rounded-full shadow-[0_0_20px_rgba(239,68,68,0.4)] hover:shadow-[0_0_30px_rgba(239,68,68,0.6)] hover:-translate-y-1 hover:scale-105 active:scale-95">
+              <Link to="/internships" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-red-600 to-orange-500 rounded-full shadow-[0_0_20px_rgba(239,68,68,0.4)] hover:shadow-[0_0_30px_rgba(239,68,68,0.6)] hover:-translate-y-1 hover:scale-105 active:scale-95">
                 Explore Courses
                 <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 relative z-10 bg-white border-b border-gray-100">
+        <div className="container relative z-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:divide-x divide-gray-100">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-center px-4"
+            >
+              <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2 font-display">
+                <CountUp end={10} duration={3} enableScrollSpy scrollSpyOnce />+
+              </div>
+              <div className="text-gray-500 font-bold uppercase tracking-wider text-sm mt-3">Happy Clients</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-center px-4"
+            >
+              <div className="text-4xl md:text-5xl font-extrabold text-accent mb-2 font-display">
+                <CountUp end={15} duration={3} enableScrollSpy scrollSpyOnce />+
+              </div>
+              <div className="text-gray-500 font-bold uppercase tracking-wider text-sm mt-3">Projects Delivered</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-center px-4 pt-8 lg:pt-0 border-t lg:border-t-0 border-gray-100"
+            >
+              <div className="text-4xl md:text-5xl font-extrabold text-blue-500 mb-2 font-display">
+                <CountUp end={1} duration={3} enableScrollSpy scrollSpyOnce />+
+              </div>
+              <div className="text-gray-500 font-bold uppercase tracking-wider text-sm mt-3">Years of Excellence</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-center px-4 pt-8 lg:pt-0 border-t lg:border-t-0 border-gray-100"
+            >
+              <div className="text-4xl md:text-5xl font-extrabold text-purple-500 mb-2 font-display">
+                <CountUp end={15} duration={3} enableScrollSpy scrollSpyOnce />+
+              </div>
+              <div className="text-gray-500 font-bold uppercase tracking-wider text-sm mt-3">Expert Team</div>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       {/* Services Section */}
@@ -266,9 +324,9 @@ export default function HomePage() {
                 Explore our portfolio of successful digital transformations and pixel-perfect applications.
               </p>
             </div>
-            <a href="/projects" className="text-primary font-semibold hover:underline flex items-center gap-2">
+            <Link to="/projects" className="text-primary font-semibold hover:underline flex items-center gap-2">
               View All Projects <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -334,12 +392,12 @@ export default function HomePage() {
               Partner with Softspera to build robust, scalable, and stunning digital products that define the future.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/contact" className="btn-primary !bg-white !text-secondary hover:!bg-gray-100 !shadow-white/20">
+              <Link to="/contact" className="btn-primary !bg-white !text-secondary hover:!bg-gray-100 !shadow-white/20">
                 Contact Us Today
-              </a>
-              <a href="/services" className="btn-secondary !bg-transparent !text-white border-white/30 hover:!bg-white/10">
+              </Link>
+              <Link to="/services" className="btn-secondary !bg-transparent !text-white border-white/30 hover:!bg-white/10">
                 Explore Services
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
