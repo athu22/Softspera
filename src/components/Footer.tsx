@@ -81,7 +81,7 @@ export default function Footer() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/softspera_technology?igsh=MWpoY2tvZXRiMDVuZA%3D%3D&utm_source=qr"
                 className="hover:text-primary"
                 aria-label="Instagram"
               >

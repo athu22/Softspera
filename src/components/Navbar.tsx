@@ -18,8 +18,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-lg border-b border-gray-100 shadow-sm transition-all duration-300">
       <nav className="container mx-auto flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <div className="flex items-center justify-center w-12 h-12 rounded-full overflow-hidden shadow-md border-2 border-primary/10 shrink-0 bg-white">
-            <img src="/src/assets/softspera.jpeg" alt="Softspera Logo" className="w-full h-full object-cover scale-[1.8] origin-top mix-blend-multiply" />
+          <div className="flex items-center justify-center w-22 h-20 overflow-hidden shrink-0">
+            <img src="/softspera.png" alt="Softspera Logo" className="w-full h-full object-contain" />
           </div>
           <span className="text-xl md:text-2xl font-extrabold text-gradient font-display pt-1">
             Softspera Technology Pvt Ltd
