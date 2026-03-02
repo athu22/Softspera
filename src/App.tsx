@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { HelmetProvider } from 'react-helmet-async';
 import { Suspense, lazy } from 'react';
@@ -35,7 +35,7 @@ function App() {
   return (
     <HelmetProvider>
       <AuthProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Suspense fallback={<PageLoader />}>
             <Routes>
               {/* Public routes */}
@@ -64,7 +64,7 @@ function App() {
             </Routes>
           </Suspense>
           <Toaster position="top-right" />
-        </BrowserRouter>
+        </HashRouter>
       </AuthProvider>
     </HelmetProvider>
   );
