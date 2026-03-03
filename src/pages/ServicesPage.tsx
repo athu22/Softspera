@@ -46,11 +46,17 @@ export default function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>Our Services - Softspera</title>
+        <title>IT Services & Solutions | Softspera</title>
         <meta
           name="description"
-          content="Explore Softspera's comprehensive range of IT services including web development, mobile apps, cloud solutions, and AI integration."
+          content="Explore Softspera's comprehensive range of IT services including Web Development, Mobile Apps, Cloud Solutions, and AI integrations."
         />
+        <meta name="keywords" content="IT Services, Web Development, Mobile Application Development, AI Integration, Cloud Services, Softspera" />
+        <link rel="canonical" href="https://softspera.com/services" />
+        <meta property="og:title" content="IT Services & Solutions | Softspera" />
+        <meta property="og:description" content="Explore Softspera's comprehensive range of IT services including Web Development, Mobile Apps, Cloud Solutions, and AI integration." />
+        <meta property="og:url" content="https://softspera.com/services" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       {/* Hero Section */}

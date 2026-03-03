@@ -74,8 +74,14 @@ export default function InternshipsPage() {
     return (
         <div className="min-h-screen bg-background pb-20">
             <Helmet>
-                <title>Courses & Internships - Softspera</title>
-                <meta name="description" content="Join Softspera through our exclusive course and internship programs. Launch your career in IT perfectly." />
+                <title>IT Courses & Internships | Softspera</title>
+                <meta name="description" content="Discover premium IT courses and internship programs at Softspera. Get comprehensive training, real-world projects, and jumpstart your career in tech." />
+                <meta name="keywords" content="IT Courses, Internships, MERN Stack, Full Stack Development, React Training, Softspera Careers" />
+                <link rel="canonical" href="https://softspera.com/internships" />
+                <meta property="og:title" content="IT Courses & Internships | Softspera" />
+                <meta property="og:description" content="Join Softspera through our exclusive course and internship programs. Launch your career in IT perfectly." />
+                <meta property="og:url" content="https://softspera.com/internships" />
+                <meta property="og:type" content="website" />
             </Helmet>
 
             {/* Hero Section */}

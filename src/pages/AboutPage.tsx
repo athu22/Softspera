@@ -66,11 +66,17 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About Us - Softspera</title>
+        <title>About Us | Softspera - Leading IT Company</title>
         <meta
           name="description"
-          content="Learn about Softspera's mission, values, and the dedicated team behind our innovative IT solutions."
+          content="Learn about Softspera's mission, values, and the dedicated team behind our innovative IT solutions. We ensure digital transformation for businesses globally."
         />
+        <meta name="keywords" content="About Softspera, IT Company Team, Software Engineering Mission, Digital Transformation Agency" />
+        <link rel="canonical" href="https://softspera.com/about" />
+        <meta property="og:title" content="About Us | Softspera" />
+        <meta property="og:description" content="Learn about Softspera's mission, values, and the dedicated team behind our innovative IT solutions." />
+        <meta property="og:url" content="https://softspera.com/about" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       {/* Hero Section */}

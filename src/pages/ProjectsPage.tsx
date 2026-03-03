@@ -11,11 +11,17 @@ export default function ProjectsPage() {
   return (
     <>
       <Helmet>
-        <title>Our Projects - Softspera</title>
+        <title>Our Work & Projects | Softspera Portfolio</title>
         <meta
           name="description"
-          content="Explore Softspera's portfolio of successful projects and see how we've helped businesses achieve their digital transformation goals."
+          content="Explore Softspera's portfolio of successful projects and see how we've helped businesses achieve their digital transformation goals with custom software."
         />
+        <meta name="keywords" content="Softspera Portfolio, IT Projects, Custom Software Development, Software Case Studies, Digital Transformation" />
+        <link rel="canonical" href="https://softspera.com/projects" />
+        <meta property="og:title" content="Our Work & Projects | Softspera Portfolio" />
+        <meta property="og:description" content="Explore Softspera's portfolio of successful custom software, web, and mobile app projects." />
+        <meta property="og:url" content="https://softspera.com/projects" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       {/* Hero Section */}

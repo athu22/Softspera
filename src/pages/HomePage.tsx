@@ -80,11 +80,19 @@ export default function HomePage() {
   return (
     <div className="overflow-hidden bg-background">
       <Helmet>
-        <title>Softspera - Premium IT Solutions</title>
+        <title>Softspera - Premium IT Solutions & Web Development</title>
         <meta
           name="description"
           content="Softspera provides cutting-edge IT solutions including web development, mobile apps, cloud services, and AI integration. Transform your business with our innovative technology solutions."
         />
+        <meta name="keywords" content="Softspera, IT Solutions, Web Development, Mobile Apps, Cloud Services, Premium Tech Agency, Software Company" />
+        <link rel="canonical" href="https://softspera.com/" />
+        <meta property="og:title" content="Softspera - Premium IT Solutions & Web Development" />
+        <meta property="og:description" content="Softspera provides cutting-edge IT solutions including web development, mobile apps, cloud services, and AI integration. Transform your business." />
+        <meta property="og:url" content="https://softspera.com/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Softspera - Premium IT Solutions" />
+        <meta name="twitter:description" content="Softspera provides cutting-edge IT solutions including web development, mobile apps, cloud services." />
       </Helmet>
 
       {/* Hero Section */}

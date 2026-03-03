@@ -69,11 +69,17 @@ export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Softspera</title>
+        <title>Contact Softspera | Let's Build Something Great Together</title>
         <meta
           name="description"
-          content="Get in touch with Softspera for innovative IT solutions. We're here to help transform your business with cutting-edge technology."
+          content="Get in touch with Softspera for innovative IT solutions. We're here to help transform your business with cutting-edge technology and custom software."
         />
+        <meta name="keywords" content="Contact Softspera, Hire Software Agency, Web Development Contact, App Development Pune" />
+        <link rel="canonical" href="https://softspera.com/contact" />
+        <meta property="og:title" content="Contact Softspera | Let's Build Something Great Together" />
+        <meta property="og:description" content="Reach out to Softspera Technology Pvt Ltd for your next big project." />
+        <meta property="og:url" content="https://softspera.com/contact" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       {/* Hero Section */}
@@ -153,10 +159,10 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Address</h3>
                     <p className="text-gray-600">
                       Office No. 402, 4th Floor,
-Regus Business Center,
-World Trade Center,
-Kharadi – Hadapsar Road,
-Pune – 411014, Maharashtra, India
+                      Regus Business Center,
+                      World Trade Center,
+                      Kharadi – Hadapsar Road,
+                      Pune – 411014, Maharashtra, India
                     </p>
                   </div>
                 </div>
